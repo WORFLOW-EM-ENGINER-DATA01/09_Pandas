@@ -148,3 +148,7 @@ Ajoutez une colonne `Salaire` au DataFrame de l'exercice 1 avec les valeurs suiv
 ### Exercice 5 : Statistiques descriptives
 
 Affichez les statistiques descriptives du DataFrame de l'exercice 1.
+
+### Exercice 6 
+
+Augmentez les salaires de 10% pour l'ensemble des Persons
