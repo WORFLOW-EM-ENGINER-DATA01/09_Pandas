@@ -1,12 +1,5 @@
 # TP : Tableaux Croisés Dynamiques avec Pandas
 
-### Objectif
-Apprendre à utiliser les tableaux croisés dynamiques (pivot tables) pour analyser et résumer des données à l'aide de Pandas.
-
-### Pré-requis
-- Connaissances de base en Python.
-- Connaissances de base en Pandas.
-- Installation de Pandas (`pip install pandas`).
 
 ### Dataset
 Vous utiliserez un dataset fictif sur les ventes de produits dans différentes régions et par différents vendeurs.
@@ -42,28 +35,17 @@ print(df)
 
 Créez un tableau croisé dynamique qui résume les ventes totales par région et par produit.
 
-```python
-pivot1 = pd.pivot_table(df, values='Sales', index='Region', columns='Product', aggfunc='sum')
-print(pivot1)
-```
 
 #### 2.2 Ajout des totaux
 
 Ajoutez des marges pour obtenir les totaux des ventes par région et par produit.
 
-```python
-pivot2 = pd.pivot_table(df, values='Sales', index='Region', columns='Product', aggfunc='sum', margins=True, margins_name='Total')
-print(pivot2)
-```
 
 #### 2.3 Analyse par vendeur
 
 Créez un tableau croisé dynamique qui montre la moyenne des ventes par vendeur et par produit.
 
-```python
-pivot3 = pd.pivot_table(df, values='Sales', index='Seller', columns='Product', aggfunc='mean')
-print(pivot3)
-```
+
 
 ### Étape 3 : Analyse des Données
 
@@ -71,19 +53,11 @@ print(pivot3)
 
 Créez un tableau croisé dynamique qui montre la moyenne des ventes par région.
 
-```python
-pivot4 = pd.pivot_table(df, values='Sales', index='Region', aggfunc='mean')
-print(pivot4)
-```
 
 #### 3.2 Vente totale par vendeur et par région
 
 Créez un tableau croisé dynamique qui montre la somme des ventes par vendeur et par région.
 
-```python
-pivot5 = pd.pivot_table(df, values='Sales', index='Seller', columns='Region', aggfunc='sum', margins=True, margins_name='Total')
-print(pivot5)
-```
 
 ### Étape 4 : Questions d'Exercice
 
@@ -94,11 +68,3 @@ Répondez aux questions suivantes en utilisant les tableaux croisés dynamiques 
 3. Quelle est la somme totale des ventes pour tous les produits dans la région East ?
 4. Quel est le total des ventes de tous les vendeurs combinés ?
 5. Quelle est la région avec la plus grande différence de ventes entre les produits A et B ?
-
-### Solutions aux Questions d'Exercice
-
-1. Utilisez `pivot2` pour répondre à la question.
-2. Utilisez `pivot3` pour répondre à la question.
-3. Utilisez `pivot1` avec la région East pour répondre à la question.
-4. Utilisez `pivot5` pour répondre à la question.
-5. Utilisez `pivot2` pour calculer la différence entre les ventes des produits A et B pour chaque région.
